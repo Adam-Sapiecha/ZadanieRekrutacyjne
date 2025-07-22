@@ -1,5 +1,6 @@
 # Zadanie rekrutacyjne – Wtyczka WordPress: Licznik wyświetleń posta
 
+Wtyczka, funkcje:
 
 - zlicza odwiedziny posta raz na sesję użytkownika,
 - zapisuje dane w post_meta,
