@@ -8,6 +8,15 @@ Wtyczka, funkcje:
 - Prezentuje 5 najczęściej oglądanych postów (Narzędzia → Top Posty)
 
 ---
+Działanie
+
+Wtyczka automatycznie zlicza liczbę odwiedzin każdego posta w WordPressie. Gdy użytkownik wejdzie na stronę pojedynczego wpisu, licznik zwiększa się o 1 – ale tylko raz na sesję (dzięki wykorzystaniu mechanizmu $_SESSION w PHP).
+
+Liczba odwiedzin jest przechowywana jako meta dane wpisu (post_meta) pod kluczem np_post_views, z wykorzystaniem funkcji WordPressa: get_post_meta() i update_post_meta().
+
+Na końcu treści posta, za pomocą filtra the_content, automatycznie dodawana jest informacja o liczbie wyświetleń. Dodatkowo w kokpicie administratora, w zakładce Narzędzia → Top Posty, wyświetlana jest tabela z 5 najczęściej oglądanymi wpisami, wygenerowana za pomocą klasy WP_Query sortującej wyniki według wartości meta_value_num.
+
+---
 
 Instalacja
 
